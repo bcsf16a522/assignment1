@@ -31,7 +31,7 @@ if(cpid==0)
 }
 else{
 	int cpid2=fork();
-	if(cpid==0)
+	if(cpid2==0)
 	{
 		for (int j=4;j<8;j++)
 		{
