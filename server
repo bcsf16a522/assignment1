@@ -1,0 +1,31 @@
+ServerL:      It passively waits for response to cliens and it is passive socket.
+
+Socket creation:
+	int sockfd= soket(domain,type,protocol)
+
+bind:
+	int bind(int sockfd, const struct sockaddr *addr,socklen_t addrlen);
+it is basically use after when u create the socket,it binds the socket with address and port number.
+
+listen:
+	int listen(int sockfd, int backlog);
+
+it puts the server socket in passive mode where it waits for client to approch the server to make a connection.
+
+accepts:
+	int new_socket= accept(int sockfd, struct sockaddr *addr, socklen_t *addrlen);
+
+					client....
+
+Client:   It initiates the communication and it must know the port and address of server.it is active socket.
+
+socket connection:
+	int sockfd = socket(domain, type, protocol)
+it is same as that of server.
+
+Connect:
+
+int connect(int sockfd, const struct sockaddr *addr,  
+                             socklen_t addrlen);
+
+The connect() system call connects the socket referred to by the file descriptor sockfd to the address specified by addr. Server’s address and port is specified in addr.
